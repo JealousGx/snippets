@@ -13,8 +13,8 @@ export const ItemContainer = styled.div`
 export const ItemWrapper = styled.div`
   display: flex;
   align-items: center;
-  ${({ group }) => group && "justify-content: space-between;"}
   flex-direction: row;
+  ${({ group }) => group && "justify-content: space-between;"}
 `;
 
 export const ItemName = styled.span`
