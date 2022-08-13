@@ -23,6 +23,7 @@ export const SidebarLogoWrapper = styled.div`
 export const SidebarLogo = styled.a`
   display: flex;
   align-items: center;
+  justify-content: center;
 
   @media (max-width: 468px) {
     display: none;

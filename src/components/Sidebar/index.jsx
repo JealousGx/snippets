@@ -9,6 +9,8 @@ import {
 } from "./SidebarStyles";
 import BrandLogo from "./BrandLogo.svg";
 
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+
 export default function Sidebar() {
   const [displaySidebar, setDisplaySidebar] = useState(false);
 
@@ -25,7 +27,7 @@ export default function Sidebar() {
     <SidebarContainer displaySidebar={displaySidebar}>
       <SidebarWrapper>
         <SidebarLogoWrapper displaySidebar={displaySidebar}>
-          <SidebarLogo href="#" displaySidebar={displaySidebar}>
+          <SidebarLogo href="#">
             <span className="app-brand-logo demo">
               <img src={BrandLogo} alt="Brand logo" />
             </span>
@@ -37,7 +39,7 @@ export default function Sidebar() {
             </div>
           </SidebarToggler>
         </SidebarLogoWrapper>
-        Test
+        Hello
       </SidebarWrapper>
     </SidebarContainer>
   );
