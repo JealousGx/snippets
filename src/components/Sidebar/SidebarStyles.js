@@ -9,10 +9,10 @@ export const SidebarWrapper = styled.div`
 
 export const SidebarLogoWrapper = styled.div`
   padding: 0.5rem 1rem;
-  margin: 0.5rem;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: ${({ displaySidebar }) =>
-    displaySidebar === true ? "space-between" : "center"};
+    displaySidebar ? "space-between" : "center"};
   align-items: center;
 
   @media (max-width: 468px) {
@@ -32,24 +32,26 @@ export const SidebarLogo = styled.a`
 
 export const SidebarBrand = styled.span`
     display: ${({ displaySidebar }) =>
-    displaySidebar === true ? "block" : "none"};
+    displaySidebar ? "block" : "none"};
 `
 
 export const SidebarToggler = styled.button`
   cursor: pointer;
   display: ${({ displaySidebar }) =>
-    displaySidebar === true ? "block" : "none"};
+    displaySidebar ? "block" : "none"};
 `;
 
 export const SidebarList = styled.div``;
 
 export const SidebarContainer = styled.div`
   width: ${({ displaySidebar }) =>
-    displaySidebar === true ? "15rem" : "5rem"};
+    displaySidebar ? "15rem" : "5rem"};
   height: 100vh;
+  padding: 0.75rem;
   background: #f3f4f4;
   transition: width 350ms ease;
   border-right: 1px solid #d4d8dd;
+  overflow-x: hidden;
 
   &:hover {
     @media (min-width: 468px) {
