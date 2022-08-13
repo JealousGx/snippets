@@ -4,11 +4,10 @@ import {
   SidebarWrapper,
   SidebarLogoWrapper,
   SidebarLogo,
+  SidebarBrand,
   SidebarToggler
 } from "./SidebarStyles";
 import BrandLogo from "./BrandLogo.svg";
-
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 
 export default function Sidebar() {
   const [displaySidebar, setDisplaySidebar] = useState(false);
@@ -30,9 +29,9 @@ export default function Sidebar() {
             <span className="app-brand-logo demo">
               <img src={BrandLogo} alt="Brand logo" />
             </span>
-            <span className="app__brand__text">Frest</span>
+            <SidebarBrand displaySidebar={displaySidebar} className="app__brand__text">Frest</SidebarBrand>
           </SidebarLogo>
-          <SidebarToggler onClick={handleSidebarDisplay}>
+          <SidebarToggler displaySidebar={displaySidebar} onClick={handleSidebarDisplay}>
             <div className="outer__circle">
               <div className="inner__circle" />
             </div>
