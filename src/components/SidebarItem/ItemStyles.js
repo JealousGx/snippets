@@ -12,8 +12,8 @@ export const ItemContainer = styled.div`
 
 export const ItemWrapper = styled.div`
   display: flex;
-  align-items: center;
   flex-direction: row;
+  align-items: center;
   ${({ group }) => group && "justify-content: space-between;"}
 `;
 
