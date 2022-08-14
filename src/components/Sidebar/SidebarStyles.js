@@ -31,21 +31,41 @@ export const SidebarLogo = styled.a`
 `;
 
 export const SidebarBrand = styled.span`
-    display: ${({ displaySidebar }) =>
-    displaySidebar ? "block" : "none"};
-`
+  display: ${({ displaySidebar }) => (displaySidebar ? "block" : "none")};
+`;
 
 export const SidebarToggler = styled.button`
   cursor: pointer;
-  display: ${({ displaySidebar }) =>
-    displaySidebar ? "block" : "none"};
+  display: ${({ displaySidebar }) => (displaySidebar ? "block" : "none")};
 `;
 
 export const SidebarList = styled.div``;
 
+// SidebarItem styles
+export const ItemContainer = styled.div`
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.5rem 0.25rem;
+
+  &:hover {
+    background: #eaeced;
+  }
+`;
+
+export const ItemWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  ${({ group }) => group && "justify-content: space-between;"}
+`;
+
+export const ItemName = styled.span`
+  margin-left: ${({ displaySidebar }) => (displaySidebar ? "0.1rem" : "0")};
+`;
+
+// Sidebar Container
 export const SidebarContainer = styled.div`
-  width: ${({ displaySidebar }) =>
-    displaySidebar ? "15rem" : "5rem"};
+  width: ${({ displaySidebar }) => (displaySidebar ? "15rem" : "5rem")};
   height: 100vh;
   padding: 0.75rem;
   background: #f3f4f4;
@@ -59,7 +79,7 @@ export const SidebarContainer = styled.div`
 
       ${SidebarLogoWrapper} {
         justify-content: ${({ displaySidebar }) =>
-    !displaySidebar && "space-between"};
+          !displaySidebar && "space-between"};
       }
 
       ${SidebarBrand} {

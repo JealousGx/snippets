@@ -1,4 +1,4 @@
-import { ItemContainer, ItemWrapper } from "./ItemStyles";
+import { ItemContainer, ItemWrapper } from "../SidebarStyles";
 
 import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
 
