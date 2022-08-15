@@ -68,7 +68,10 @@
         "humao.rest-client",
         "bradlc.vscode-tailwindcss",
         "styled-components.vscode-styled-components",
-        "usernamehw.errorlens"
+        "usernamehw.errorlens",
+        "codespaces-contrib.codeswing",
+        "tyriar.luna-paint",
+        "ms-vscode.vscode-github-issue-notebooks"
       ]
     }
   },
@@ -77,7 +80,7 @@
   // "forwardPorts": [],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "yarn install",
+  "postCreateCommand": "npm install --legacy-peer-deps",
 
   // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
   "remoteUser": "node",

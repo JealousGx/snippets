@@ -43,9 +43,10 @@ export const SidebarList = styled.div``;
 
 // SidebarItem styles
 export const ItemContainer = styled.div`
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   width: 100%;
   padding: 0.5rem 0.25rem;
+  cursor: pointer;
 
   &:hover {
     background: #eaeced;
@@ -54,13 +55,33 @@ export const ItemContainer = styled.div`
 
 export const ItemWrapper = styled.div`
   display: flex;
-  flex-direction: row;
   align-items: center;
-  ${({ group }) => group && "justify-content: space-between;"}
+`;
+
+export const ItemWrapperGroup = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 468px) {
+    justify-content: center;
+  }
+`;
+
+export const Item = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const ItemArrow = styled.span`
+  display: ${({ displaySidebar }) => (displaySidebar ? "flex" : "none")};
+  align-items: center;
+  justify-content: center;
 `;
 
 export const ItemName = styled.span`
-  margin-left: ${({ displaySidebar }) => (displaySidebar ? "0.1rem" : "0")};
+  margin-left: ${({ displaySidebar }) => (displaySidebar ? "0.5rem" : "0")};
+  display: ${({ displaySidebar }) => (displaySidebar ? "block" : "none")};
 `;
 
 // Sidebar Container
@@ -72,6 +93,14 @@ export const SidebarContainer = styled.div`
   transition: width 350ms ease;
   border-right: 1px solid #d4d8dd;
   overflow-x: hidden;
+
+  ${ItemWrapperGroup} {
+    justify-content: ${({ displaySidebar }) => !displaySidebar && "center"};
+  }
+
+  ${ItemWrapper} {
+    justify-content: ${({ displaySidebar }) => !displaySidebar && "center"};
+  }
 
   &:hover {
     @media (min-width: 468px) {
@@ -88,6 +117,26 @@ export const SidebarContainer = styled.div`
 
       ${SidebarToggler} {
         display: ${({ displaySidebar }) => !displaySidebar && "block"};
+      }
+
+      // Sidebar Item styles
+      ${ItemWrapperGroup} {
+        justify-content: ${({ displaySidebar }) =>
+          !displaySidebar && "space-between"};
+      }
+
+      ${ItemWrapper} {
+        justify-content: ${({ displaySidebar }) =>
+          !displaySidebar && "flex-start"};
+      }
+
+      ${ItemName} {
+        display: ${({ displaySidebar }) => !displaySidebar && "block"};
+        margin-left: ${({ displaySidebar }) => !displaySidebar && "0.5rem"};
+      }
+
+      ${ItemArrow} {
+        display: ${({ displaySidebar }) => !displaySidebar && "flex"};
       }
     }
   }

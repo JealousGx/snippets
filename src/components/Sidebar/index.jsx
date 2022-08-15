@@ -9,9 +9,7 @@ import {
 } from "./SidebarStyles";
 import BrandLogo from "./BrandLogo.svg";
 
-import { SidebarItem } from "..";
-
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import { SidebarItem, dummyData } from "..";
 
 export default function Sidebar() {
   const [displaySidebar, setDisplaySidebar] = useState(false);
@@ -49,12 +47,15 @@ export default function Sidebar() {
             </div>
           </SidebarToggler>
         </SidebarLogoWrapper>
-        <SidebarItem
-          icon={<HomeOutlinedIcon />}
-          displaySidebar={displaySidebar}
-          group={true}
-          name="Dashboards"
-        />
+        {dummyData.map((itemData, index) => (
+          <SidebarItem
+            key={index}
+            icon={itemData.icon}
+            displaySidebar={displaySidebar}
+            group={itemData.group}
+            name={itemData.name}
+          />
+        ))}
       </SidebarWrapper>
     </SidebarContainer>
   );

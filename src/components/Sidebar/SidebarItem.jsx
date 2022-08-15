@@ -1,19 +1,28 @@
-import { ItemContainer, ItemWrapper } from "../SidebarStyles";
+import {
+  ItemContainer,
+  ItemWrapper,
+  ItemWrapperGroup,
+  Item,
+  ItemName,
+  ItemArrow,
+} from "./SidebarStyles";
 
-import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
+import { ArrowIcon } from "../Icons";
 
 const SidebarItem = (props) => {
   const { icon, group, name, displaySidebar } = props;
   if (group) {
     return (
       <ItemContainer>
-        <ItemWrapper group={true}>
-          <div>
+        <ItemWrapperGroup>
+          <Item>
             {icon}
-            {name}
-          </div>
-          <ArrowRightOutlinedIcon />
-        </ItemWrapper>
+            <ItemName displaySidebar={displaySidebar}>{name}</ItemName>
+          </Item>
+          <ItemArrow displaySidebar={displaySidebar}>
+            <ArrowIcon />
+          </ItemArrow>
+        </ItemWrapperGroup>
       </ItemContainer>
     );
   } else {
@@ -21,7 +30,7 @@ const SidebarItem = (props) => {
       <ItemContainer>
         <ItemWrapper>
           {icon}
-          {name}
+          <ItemName displaySidebar={displaySidebar}>{name}</ItemName>
         </ItemWrapper>
       </ItemContainer>
     );
