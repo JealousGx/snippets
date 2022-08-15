@@ -1,5 +1,14 @@
 import styled from "styled-components";
 
+// Children Component
+export const Children = styled.div`
+  margin-left: ${({ displaySidebar }) => (displaySidebar ? "15rem" : "5rem")};
+
+  @media (max-width: 468px) {
+    margin-left: 5rem;
+  }
+`;
+
 export const SidebarWrapper = styled.div`
   width: 100%;
   height: 100%;
@@ -56,12 +65,14 @@ export const ItemContainer = styled.div`
 export const ItemWrapper = styled.div`
   display: flex;
   align-items: center;
+  color: #7c7788;
 `;
 
 export const ItemWrapperGroup = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: #7c7788;
 
   @media (max-width: 468px) {
     justify-content: center;
@@ -86,6 +97,8 @@ export const ItemName = styled.span`
 
 // Sidebar Container
 export const SidebarContainer = styled.div`
+  position: absolute;
+  left: 0;
   width: ${({ displaySidebar }) => (displaySidebar ? "15rem" : "5rem")};
   height: 100vh;
   padding: 0.75rem;
@@ -93,6 +106,8 @@ export const SidebarContainer = styled.div`
   transition: width 350ms ease;
   border-right: 1px solid #d4d8dd;
   overflow-x: hidden;
+  ${({ displaySidebar }) =>
+    displaySidebar && "box-shadow: 8px 0px 12px 0px rgba(0,0,0,0.1)"};
 
   ${ItemWrapperGroup} {
     justify-content: ${({ displaySidebar }) => !displaySidebar && "center"};
@@ -103,6 +118,9 @@ export const SidebarContainer = styled.div`
   }
 
   &:hover {
+    ${({ displaySidebar }) =>
+      !displaySidebar && "box-shadow: 8px 0px 12px 0px rgba(0,0,0,0.1)"};
+
     @media (min-width: 468px) {
       width: ${({ displaySidebar }) => !displaySidebar && "15rem"};
 

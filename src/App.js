@@ -1,9 +1,13 @@
-import { Sidebar } from './components'
-import './App.css';
+import { Sidebar } from "./components";
+import "./App.css";
 
 function App() {
   return (
-    <Sidebar />
+    <div id="main">
+      <Sidebar>
+        <p>Hi</p>
+      </Sidebar>
+    </div>
   );
 }
 

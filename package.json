@@ -1,7 +1,8 @@
 {
   "name": "frest-sidebar",
   "version": "0.1.0",
-  "private": true,
+  "author": "JealousGx <jealousjsp@gmail.com>",
+  "description": "Sidebar component made with React & Styled Components.",
   "dependencies": {
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",

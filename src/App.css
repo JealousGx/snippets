@@ -12,6 +12,11 @@
     sans-serif;
 }
 
+#main {
+  display: flex;
+  flex-direction: row;
+}
+
 .app__brand__text {
   font-size: 2rem;
   font-weight: 700;
