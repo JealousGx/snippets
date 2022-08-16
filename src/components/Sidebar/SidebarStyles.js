@@ -14,6 +14,7 @@ export const SidebarWrapper = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+  font-size: 0.9rem;
 `;
 
 export const SidebarLogoWrapper = styled.div`
@@ -93,6 +94,7 @@ export const ItemArrow = styled.span`
 export const ItemName = styled.span`
   margin-left: ${({ displaySidebar }) => (displaySidebar ? "0.5rem" : "0")};
   display: ${({ displaySidebar }) => (displaySidebar ? "block" : "none")};
+  text-transform: capitalize;
 `;
 
 // Sidebar Container
