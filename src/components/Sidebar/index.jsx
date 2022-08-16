@@ -56,6 +56,7 @@ export default function Sidebar({ children }) {
               displaySidebar={displaySidebar}
               group={itemData.group}
               name={itemData.name}
+              childItems={itemData.items}
             />
           ))}
         </SidebarWrapper>

@@ -57,8 +57,12 @@ export const ItemContainer = styled.div`
   width: 100%;
   padding: 0.5rem 0.25rem;
   cursor: pointer;
-
+    
   &:hover {
+    background: #E4E6E7;
+  }
+
+  &.active {
     background: #eaeced;
   }
 `;
@@ -70,6 +74,30 @@ export const ItemWrapper = styled.div`
 `;
 
 export const ItemWrapperGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+// Wrapper for the group items.
+export const ItemsWrapper = styled.ul`
+  padding: 0 2rem;
+  display: ${({ displaySidebar }) => displaySidebar ? "block" : "none"};
+`;
+
+export const ChildItem = styled.li`
+  padding: 0.5rem 0;
+  width: 100%;
+
+  &:hover {
+    background: #E4E6E7;
+  }
+
+  &.active {
+    background: #eaeced;
+  }
+`;
+
+export const ItemTitleGroup = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -111,7 +139,7 @@ export const SidebarContainer = styled.div`
   ${({ displaySidebar }) =>
     displaySidebar && "box-shadow: 8px 0px 12px 0px rgba(0,0,0,0.1)"};
 
-  ${ItemWrapperGroup} {
+  ${ItemTitleGroup} {
     justify-content: ${({ displaySidebar }) => !displaySidebar && "center"};
   }
 
@@ -139,8 +167,13 @@ export const SidebarContainer = styled.div`
         display: ${({ displaySidebar }) => !displaySidebar && "block"};
       }
 
+      // Wrapper form group items.
+      ${ItemsWrapper} {
+        display: ${({ displaySidebar}) => !displaySidebar && "block"};
+      }
+
       // Sidebar Item styles
-      ${ItemWrapperGroup} {
+      ${ItemTitleGroup} {
         justify-content: ${({ displaySidebar }) =>
           !displaySidebar && "space-between"};
       }
