@@ -15,13 +15,19 @@ export const SIDEBAR_DATA = [
   {
     name: "dashboards",
     group: true,
-    items: ["analytics", "ecommerce"],
+    items: [
+      { id: 1, name: "analytics" },
+      { id: 2, name: "ecommerce" },
+    ],
     icon: <HomeIcon />,
   },
   {
     name: "layouts",
     group: true,
-    items: ["collapsed menu", "content navbar"],
+    items: [
+      { id: 3, name: "collapsed menu" },
+      { id: 4, name: "content navbar" },
+    ],
     icon: <LayoutIcon />,
   },
   {
@@ -32,37 +38,55 @@ export const SIDEBAR_DATA = [
   {
     name: "invoice",
     group: true,
-    items: ["list", "preview"],
+    items: [
+      { id: 5, name: "list" },
+      { id: 6, name: "preview" },
+    ],
     icon: <InvoiceIcon />,
   },
   {
     name: "users",
     group: true,
-    items: ["list", "view"],
+    items: [
+      { id: 7, name: "list" },
+      { id: 8, name: "view" },
+    ],
     icon: <UserIcon />,
   },
   {
     name: "roles & permissions",
     group: true,
-    items: ["roles", "permission"],
+    items: [
+      { id: 9, name: "roles" },
+      { id: 10, name: "permission" },
+    ],
     icon: <RolesIcon />,
   },
   {
     name: "pages",
     group: true,
-    items: ["user profile", "account settings"],
+    items: [
+      { id: 11, name: "user profile" },
+      { id: 12, name: "account settings" },
+    ],
     icon: <PagesIcon />,
   },
   {
     name: "authentication",
     group: true,
-    items: ["login", "register"],
+    items: [
+      { id: 13, name: "login" },
+      { id: 14, name: "register" },
+    ],
     icon: <AuthIcon />,
   },
   {
     name: "wizard examples",
     group: true,
-    items: ["checkout", "create deal"],
+    items: [
+      { id: 15, name: "checkout" },
+      { id: 16, name: "create deal" },
+    ],
     icon: <WizardIcon />,
   },
   {

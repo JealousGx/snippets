@@ -57,12 +57,12 @@ export const ItemContainer = styled.div`
   width: 100%;
   padding: 0.5rem 0.25rem;
   cursor: pointer;
-    
-  &:hover {
-    background: #E4E6E7;
-  }
 
   &.active {
+    background: #dbe4f3;
+  }
+
+  &:hover {
     background: #eaeced;
   }
 `;
@@ -81,18 +81,19 @@ export const ItemWrapperGroup = styled.div`
 // Wrapper for the group items.
 export const ItemsWrapper = styled.ul`
   padding: 0 2rem;
-  display: ${({ displaySidebar }) => displaySidebar ? "block" : "none"};
+  width: 100%;
+  display: ${({ displaySidebar }) => (displaySidebar ? "block" : "none")};
 `;
 
 export const ChildItem = styled.li`
   padding: 0.5rem 0;
   width: 100%;
 
-  &:hover {
-    background: #E4E6E7;
+  &.active {
+    background: #dbe4f3;
   }
 
-  &.active {
+  &:hover {
     background: #eaeced;
   }
 `;
@@ -169,7 +170,7 @@ export const SidebarContainer = styled.div`
 
       // Wrapper form group items.
       ${ItemsWrapper} {
-        display: ${({ displaySidebar}) => !displaySidebar && "block"};
+        display: ${({ displaySidebar }) => !displaySidebar && "block"};
       }
 
       // Sidebar Item styles

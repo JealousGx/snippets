@@ -9,19 +9,19 @@ import {
   ItemName,
   ItemArrow,
   ItemsWrapper,
-  ChildItem
+  ChildItem,
 } from "./SidebarStyles";
 
 import { ArrowIcon } from "../Icons";
 
 const SidebarItem = (props) => {
   const { icon, group, childItems, name, displaySidebar } = props;
-  const [active, setActive] = useState(null);
+  const [active, setActive] = useState(0);
 
   const handleClick = (e, index) => {
     e.preventDefault();
     setActive(index);
-  }
+  };
 
   console.log(active);
 
@@ -40,7 +40,16 @@ const SidebarItem = (props) => {
           </ItemTitleGroup>
           <ItemsWrapper displaySidebar={displaySidebar}>
             {childItems.map(
-              (item, index) => item && <ChildItem onClick={(e) => handleClick(e, index)} key={index}>{item}</ChildItem>
+              (item) =>
+                item && (
+                  <ChildItem
+                    onClick={(e) => handleClick(e, item.id)}
+                    className={active === item.id && "active"}
+                    key={item.id}
+                  >
+                    {item.name}
+                  </ChildItem>
+                )
             )}
           </ItemsWrapper>
         </ItemWrapperGroup>
