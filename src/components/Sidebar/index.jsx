@@ -52,9 +52,9 @@ export default function Sidebar({ children }) {
           {dummyData.map((itemData, index) => (
             <SidebarItem
               key={index}
-              icon={itemData.icon}
+              itemData={itemData}
+              index={index}
               displaySidebar={displaySidebar}
-              name={itemData.name}
             />
           ))}
         </SidebarWrapper>

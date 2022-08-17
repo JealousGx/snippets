@@ -1,20 +1,16 @@
-import {
-  ItemContainer,
-  ItemWrapper,
-  ItemName,
-} from "./SidebarStyles";
+import { ItemContainer, ItemWrapper, ItemName } from "./SidebarStyles";
 
-const SidebarItem = (props) => {
-  const { icon, name, displaySidebar } = props;
+const SidebarItem = ({ className, itemData, displaySidebar }) => {
+  const { icon, name } = itemData;
 
-    return (
-      <ItemContainer>
-        <ItemWrapper>
-          {icon}
-          <ItemName displaySidebar={displaySidebar}>{name}</ItemName>
-        </ItemWrapper>
-      </ItemContainer>
-    );
+  return (
+    <ItemContainer className={className && className}>
+      <ItemWrapper>
+        {icon}
+        <ItemName displaySidebar={displaySidebar}>{name}</ItemName>
+      </ItemWrapper>
+    </ItemContainer>
+  );
 };
 
 export default SidebarItem;

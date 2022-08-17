@@ -49,18 +49,12 @@ export const SidebarToggler = styled.button`
   display: ${({ displaySidebar }) => (displaySidebar ? "block" : "none")};
 `;
 
-export const SidebarList = styled.div``;
-
 // SidebarItem styles
 export const ItemContainer = styled.div`
   margin-top: 0.5rem;
   width: 100%;
   padding: 0.5rem 0.25rem;
   cursor: pointer;
-
-  &.active {
-    background: #dbe4f3;
-  }
 
   &:hover {
     background: #eaeced;
@@ -71,42 +65,6 @@ export const ItemWrapper = styled.div`
   display: flex;
   align-items: center;
   color: #7c7788;
-`;
-
-export const ItemWrapperGroup = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-// Wrapper for the group items.
-export const ItemsWrapper = styled.ul`
-  padding: 0 2rem;
-  width: 100%;
-  display: ${({ displaySidebar }) => (displaySidebar ? "block" : "none")};
-`;
-
-export const ChildItem = styled.li`
-  padding: 0.5rem 0;
-  width: 100%;
-
-  &.active {
-    background: #dbe4f3;
-  }
-
-  &:hover {
-    background: #eaeced;
-  }
-`;
-
-export const ItemTitleGroup = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: #7c7788;
-
-  @media (max-width: 468px) {
-    justify-content: center;
-  }
 `;
 
 export const ItemName = styled.span`
@@ -128,10 +86,6 @@ export const SidebarContainer = styled.div`
   overflow-x: hidden;
   ${({ displaySidebar }) =>
     displaySidebar && "box-shadow: 8px 0px 12px 0px rgba(0,0,0,0.1)"};
-
-  ${ItemTitleGroup} {
-    justify-content: ${({ displaySidebar }) => !displaySidebar && "center"};
-  }
 
   ${ItemWrapper} {
     justify-content: ${({ displaySidebar }) => !displaySidebar && "center"};
@@ -157,17 +111,6 @@ export const SidebarContainer = styled.div`
         display: ${({ displaySidebar }) => !displaySidebar && "block"};
       }
 
-      // Wrapper form group items.
-      ${ItemsWrapper} {
-        display: ${({ displaySidebar }) => !displaySidebar && "block"};
-      }
-
-      // Sidebar Item styles
-      ${ItemTitleGroup} {
-        justify-content: ${({ displaySidebar }) =>
-          !displaySidebar && "space-between"};
-      }
-
       ${ItemWrapper} {
         justify-content: ${({ displaySidebar }) =>
           !displaySidebar && "flex-start"};
@@ -179,25 +122,25 @@ export const SidebarContainer = styled.div`
       }
     }
   }
- 
-::-webkit-scrollbar {
-  width: 4px;
-  height: 3px;
-}
 
-::-webkit-scrollbar-track {
-  border-radius: 10px;
-  background-color: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background: #eaeced;
-
-  &:hover {
-    background: #D5E0F3;
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 3px;
   }
-}
+
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #eaeced;
+
+    &:hover {
+      background: #d5e0f3;
+    }
+  }
 
   @media (max-width: 468px) {
     width: 5rem;
