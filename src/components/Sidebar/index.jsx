@@ -54,9 +54,7 @@ export default function Sidebar({ children }) {
               key={index}
               icon={itemData.icon}
               displaySidebar={displaySidebar}
-              group={itemData.group}
               name={itemData.name}
-              childItems={itemData.items}
             />
           ))}
         </SidebarWrapper>

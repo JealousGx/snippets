@@ -109,17 +109,6 @@ export const ItemTitleGroup = styled.div`
   }
 `;
 
-export const Item = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-export const ItemArrow = styled.span`
-  display: ${({ displaySidebar }) => (displaySidebar ? "flex" : "none")};
-  align-items: center;
-  justify-content: center;
-`;
-
 export const ItemName = styled.span`
   margin-left: ${({ displaySidebar }) => (displaySidebar ? "0.5rem" : "0")};
   display: ${({ displaySidebar }) => (displaySidebar ? "block" : "none")};
@@ -188,12 +177,27 @@ export const SidebarContainer = styled.div`
         display: ${({ displaySidebar }) => !displaySidebar && "block"};
         margin-left: ${({ displaySidebar }) => !displaySidebar && "0.5rem"};
       }
-
-      ${ItemArrow} {
-        display: ${({ displaySidebar }) => !displaySidebar && "flex"};
-      }
     }
   }
+ 
+::-webkit-scrollbar {
+  width: 4px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #eaeced;
+
+  &:hover {
+    background: #D5E0F3;
+  }
+}
 
   @media (max-width: 468px) {
     width: 5rem;
