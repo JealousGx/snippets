@@ -49,6 +49,10 @@ export const SidebarBrand = styled.span`
 export const SidebarToggler = styled.button`
   cursor: pointer;
   display: ${({ displaySidebar }) => (displaySidebar ? "block" : "none")};
+
+  @media (max-width: 468px) {
+    display: block;
+  }
 `;
 
 // SidebarItem styles
@@ -60,6 +64,7 @@ export const ItemContainer = styled.li`
   margin-top: 0.5rem;
   width: 100%;
   padding: 0.5rem 0.25rem;
+  border-radius: 0.2rem;
   cursor: pointer;
 
   &:hover {
