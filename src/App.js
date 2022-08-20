@@ -1,18 +1,23 @@
-import { BrowserRouter as Router, Routes } from "react-router-dom";
-import { Sidebar } from "./components";
+import { Routes, Route } from "react-router-dom";
+import { DynamicItem, Sidebar, dummyData } from "./components";
 import "./App.css";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <div id="main">
-          <Sidebar>
-            <p>Hi</p>
-          </Sidebar>
-        </div>
-      </Routes>
-    </Router>
+    <div id="main">
+      <Sidebar>
+        <Routes>
+          <Route path="/" element={<DynamicItem page="homepage" />} />
+          {dummyData &&
+            dummyData.map((item) => (
+              <Route
+                path={item.path}
+                element={<DynamicItem page={item.name} />}
+              />
+            ))}
+        </Routes>
+      </Sidebar>
+    </div>
   );
 }
 

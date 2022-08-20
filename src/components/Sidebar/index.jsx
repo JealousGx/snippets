@@ -63,12 +63,14 @@ export default function Sidebar({ children }) {
                 onClick={() => setActiveItem(itemData.id)}
                 className={activeItem === itemData.id ? "active" : ""}
               >
-                <ItemWrapper>
-                  {itemData.icon}
-                  <ItemName displaySidebar={displaySidebar}>
-                    {itemData.name}
-                  </ItemName>
-                </ItemWrapper>
+                <Link to={itemData.path}>
+                  <ItemWrapper>
+                    {itemData.icon}
+                    <ItemName displaySidebar={displaySidebar}>
+                      {itemData.name}
+                    </ItemName>
+                  </ItemWrapper>
+                </Link>
               </ItemContainer>
             ))}
           </ItemsList>

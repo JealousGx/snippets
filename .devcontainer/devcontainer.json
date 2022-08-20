@@ -71,7 +71,8 @@
         "usernamehw.errorlens",
         "codespaces-contrib.codeswing",
         "tyriar.luna-paint",
-        "ms-vscode.vscode-github-issue-notebooks"
+        "ms-vscode.vscode-github-issue-notebooks",
+        "github.copilot"
       ]
     }
   },
