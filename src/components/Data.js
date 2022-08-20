@@ -53,11 +53,12 @@ export const SIDEBAR_DATA = [
     icon: <AuthIcon />,
   },
   {
+    id: 9,
     name: "wizard examples",
     icon: <WizardIcon />,
   },
   {
-    id: 9,
+    id: 10,
     name: "modal examples",
     icon: <ModalIcon />,
   },

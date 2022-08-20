@@ -50,7 +50,11 @@ export const SidebarToggler = styled.button`
 `;
 
 // SidebarItem styles
-export const ItemContainer = styled.div`
+export const ItemsList = styled.ul`
+  list-style: none;
+`;
+
+export const ItemContainer = styled.li`
   margin-top: 0.5rem;
   width: 100%;
   padding: 0.5rem 0.25rem;
@@ -58,6 +62,10 @@ export const ItemContainer = styled.div`
 
   &:hover {
     background: #eaeced;
+  }
+
+  &.active {
+    background-color: #dbe4f3;
   }
 `;
 

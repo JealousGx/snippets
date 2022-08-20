@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 import {
   Children,
   SidebarContainer,
@@ -7,13 +9,18 @@ import {
   SidebarLogo,
   SidebarBrand,
   SidebarToggler,
+  ItemsList,
+  ItemContainer,
+  ItemWrapper,
+  ItemName,
 } from "./SidebarStyles";
 import BrandLogo from "./BrandLogo.svg";
 
-import { SidebarItem, dummyData } from "..";
+import { dummyData } from "..";
 
 export default function Sidebar({ children }) {
   const [displaySidebar, setDisplaySidebar] = useState(true);
+  const [activeItem, setActiveItem] = useState(0);
 
   const handleSidebarDisplay = (e) => {
     e.preventDefault();
@@ -49,14 +56,22 @@ export default function Sidebar({ children }) {
               </div>
             </SidebarToggler>
           </SidebarLogoWrapper>
-          {dummyData.map((itemData, index) => (
-            <SidebarItem
-              key={index}
-              itemData={itemData}
-              index={index}
-              displaySidebar={displaySidebar}
-            />
-          ))}
+          <ItemsList>
+            {dummyData.map((itemData, index) => (
+              <ItemContainer
+                key={index}
+                onClick={() => setActiveItem(itemData.id)}
+                className={activeItem === itemData.id ? "active" : ""}
+              >
+                <ItemWrapper>
+                  {itemData.icon}
+                  <ItemName displaySidebar={displaySidebar}>
+                    {itemData.name}
+                  </ItemName>
+                </ItemWrapper>
+              </ItemContainer>
+            ))}
+          </ItemsList>
         </SidebarWrapper>
       </SidebarContainer>
       <Children displaySidebar={displaySidebar}>{children}</Children>
