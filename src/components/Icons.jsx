@@ -10,6 +10,7 @@ import ListAltOutlinedIcon from "@mui/icons-material/ListAltOutlined";
 import InputOutlinedIcon from "@mui/icons-material/InputOutlined";
 
 import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 export {
   HomeOutlinedIcon as HomeIcon,
@@ -22,5 +23,6 @@ export {
   AdminPanelSettingsOutlinedIcon as AuthIcon,
   ListAltOutlinedIcon as WizardIcon,
   InputOutlinedIcon as ModalIcon,
+  ArrowBackIcon,
   ArrowRightOutlinedIcon as ArrowIcon,
 };

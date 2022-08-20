@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 // Children Component
 export const Children = styled.div`
+  width: 100%;
+  height: 100%;
   margin-left: ${({ displaySidebar }) => (displaySidebar ? "15rem" : "5rem")};
 
   @media (max-width: 468px) {
