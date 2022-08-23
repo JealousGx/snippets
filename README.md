@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/JealousGx/snippets/frest-sidebar/src/assets/goal.png" alt="Sidebar" height="1024">
 
-Branch for Frest Sidebar
+Branch for Sidebar
 
 ## How to run:
 
