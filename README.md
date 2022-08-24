@@ -1,13 +1,21 @@
-# Frest Sidebar
+# Code Snippets
 
-<img src="https://raw.githubusercontent.com/JealousGx/snippets/frest-sidebar/src/assets/goal.png" alt="Sidebar" height="1024">
+Code Snippets are a great way to share code that you have written and want to share with others. This is one of the platforms that you can use to share code. You can share code snippets with other people and ask them to help you with your code.
 
-Branch for Sidebar
+Code Snippets can be in any language. You can share code snippets in Python, Java, C, C++, C#, PHP, JavaScript, Ruby, Go, Rust, Scala, and many other languages. Following are the languages that I will be sharing code snippets in: Feel free to update the following list as you add more languages.
 
-## How to run:
+- Python
+- Django
+- FastAPI
+- JavaScript
+- TypeScript
+- React
+- Next.js
 
-You need to have [Docker Desktop](https://www.docker.com/get-started/) installed to get everything setup beforehand. The docker file will automatically run everything to setup the container.
+## Follow the links to see the code snippets:
 
-##### For those who do not have Docker Desktop:
+- React Sidebar (with React Router): https://github.com/JealousGx/snippets/tree/sidebar
 
-Just simply clone / fork this repository and run `npm install --legacy-peer-deps` as the Node version might not be compatible. After that, simple run `npm start`, and you are good to go.
+### Contributing to this repository:
+
+This is an open source repository. Feel free to contribute! If you want to contribute, please open an issue or a pull request.
