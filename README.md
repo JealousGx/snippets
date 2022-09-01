@@ -1,4 +1,5 @@
-# Code Snippets
+# Vite (React) Navbar
+
 ![Code Snippets](https://res.cloudinary.com/jealousgx/image/upload/v1661260257/snippets-cover_vui9x0.png)
 Code Snippets are a great way to share code that you have written and want to share with others. This is one of the platforms that you can use to share code. You can share code snippets with other people and ask them to help you with your code.
 
