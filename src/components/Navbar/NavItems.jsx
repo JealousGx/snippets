@@ -1,17 +1,17 @@
 import { useState } from "react";
 import { NavList } from "./NavbarElements";
 
-import { NAV_ITEMS, TABLET_VIEW } from "./helpers";
-
-const NavItems = () => {
+const NavItems = (props) => {
+  const { data } = props;
   const [active, setActive] = useState(null);
+  let TABLET_VIEW = window.innerWidth <= 768;
 
   return (
     <NavList>
-      {NAV_ITEMS.map((item, index) => (
+      {data?.map((item, index) => (
         <li
           key={index}
-          className={active === index && "active"}
+          className={active === index ? "active" : undefined}
           onClick={() => setActive(index)}
         >
           {!TABLET_VIEW && (
