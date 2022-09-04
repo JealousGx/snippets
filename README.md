@@ -1,22 +1,18 @@
 # Vite (React) Navbar
 
 ![Code Snippets](https://res.cloudinary.com/jealousgx/image/upload/v1661260257/snippets-cover_vui9x0.png)
-Code Snippets are a great way to share code that you have written and want to share with others. This is one of the platforms that you can use to share code. You can share code snippets with other people and ask them to help you with your code.
 
-Code Snippets can be in any language. You can share code snippets in Python, Java, C, C++, C#, PHP, JavaScript, Ruby, Go, Rust, Scala, and many other languages. Following are the languages that I will be sharing code snippets in: Feel free to update the following list as you add more languages.
+## Features
 
-- Python
-- Django
-- FastAPI
-- JavaScript
-- TypeScript
+Users should be able to:
+
+View the optimal layout for each of the website's pages depending on their device's screen size
+See hover states for all interactive elements on the page
+View each page and be able to toggle between the tabs to see new information
+
+## Built With
+
+- Vite
 - React
-- Next.js
-
-## Follow the links to see the code snippets:
-
-- React Sidebar (with React Router): https://github.com/JealousGx/snippets/tree/sidebar
-
-### Contributing to this repository:
-
-This is an open source repository. Feel free to contribute! If you want to contribute, please open an issue or a pull request.
+- JavaScript
+- Styled Components
