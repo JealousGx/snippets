@@ -4,8 +4,12 @@ const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3rem 0 3rem 3rem;
+  padding: 2rem 0 2rem 2rem;
   position: relative;
+
+  @media (max-width: 768px) {
+    padding: 0 0 0 2rem;
+  }
 `;
 
 const NavLogoWrapper = styled.div`
@@ -14,11 +18,16 @@ const NavLogoWrapper = styled.div`
   img {
     transform: scale(1);
     transition: transform 250ms ease;
-  }
 
-  img {
     &:hover {
       transform: scale(0.75);
+    }
+  }
+
+  @media (max-width: 468px) {
+    img {
+      width: 24px;
+      height: 24px;
     }
   }
 `;
@@ -27,11 +36,11 @@ const NavList = styled.ol`
   font-family: "Barlow Condensed", sans-serif;
   font-size: 16px;
   letter-spacing: 1.7px;
-  padding: 0 22rem 0 10rem;
+  padding: 0 8rem 0 6rem;
   display: flex;
-  gap: 2rem;
   align-items: center;
   justify-content: center;
+  gap: 2rem;
   background-color: rgba(151, 151, 151, 0.1);
   backdrop-filter: blur(8px);
   text-transform: uppercase;
@@ -51,6 +60,13 @@ const NavList = styled.ol`
     &.active {
       border-bottom: 2px solid #fff;
     }
+  }
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding: 0 2rem;
+    gap: 1rem;
+    justify-content: space-between;
   }
 `;
 

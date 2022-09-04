@@ -28,7 +28,7 @@ body {
 @media screen and (max-width: 640px) {
   body {
     height: 100vh;
-    background: url("./assets/backgrounds/background-home-mobile.jpg");
+    background: url("./assets/backgrounds/background-home-tablet.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -50,4 +50,10 @@ body {
   border: 0.1px solid rgba(151, 151, 151, 0.5);
   transform: translateX(25px);
   z-index: 99;
+}
+
+@media screen and (max-width: 768px) {
+  .line {
+    display: none;
+  }
 }
