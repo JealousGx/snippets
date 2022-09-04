@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { NavList } from "./NavbarElements";
+import { NavList, ItemIndex } from "./NavbarElements";
 
 const NavItems = (props) => {
   const { data } = props;
   const [active, setActive] = useState(null);
-  let TABLET_VIEW = window.innerWidth <= 768;
 
   return (
     <NavList>
@@ -14,16 +13,7 @@ const NavItems = (props) => {
           className={active === index ? "active" : undefined}
           onClick={() => setActive(index)}
         >
-          {!TABLET_VIEW && (
-            <span
-              style={{
-                marginRight: "0.5rem",
-                fontWeight: "bold",
-              }}
-            >
-              0{index}
-            </span>
-          )}
+          <ItemIndex>0{index}</ItemIndex>
           {item}
         </li>
       ))}

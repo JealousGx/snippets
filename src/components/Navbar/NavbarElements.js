@@ -42,7 +42,7 @@ const NavList = styled.ol`
   font-size: 16px;
   letter-spacing: 1.7px;
   padding: 0 8rem 0 6rem;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   gap: 2rem;
@@ -73,10 +73,30 @@ const NavList = styled.ol`
     gap: 1rem;
     justify-content: space-between;
   }
+
+  @media (min-width: 640px) {
+    display: flex;
+  }
+`;
+
+// Remove the indices for tablet view
+const ItemIndex = styled.span`
+  margin-right: 0.5rem;
+  font-weight: bold;
+
+  @media (min-width: 640px) and (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 // Mobile Items
-const MobileContainer = styled.div``;
+const MobileContainer = styled.div`
+  display: none;
+
+  @media (max-width: 640px) {
+    display: block;
+  }
+`;
 
 const MobileIconWrapper = styled.div`
   width: 100%;
@@ -102,7 +122,7 @@ const MobileList = styled.ol`
   font-family: "Barlow Condensed", sans-serif;
   font-size: 16px;
   letter-spacing: 1.7px;
-  width: 14rem;
+  width: 16rem;
   height: 100vh;
   padding: 6rem 2rem;
   display: flex;
@@ -136,6 +156,7 @@ export {
   NavContainer,
   NavLogoWrapper,
   NavList,
+  ItemIndex,
   MobileContainer,
   MobileIconWrapper,
   MobileList,

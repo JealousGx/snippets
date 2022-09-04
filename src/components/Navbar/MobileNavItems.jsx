@@ -4,6 +4,7 @@ import {
   MobileContainer,
   MobileIconWrapper,
   MobileList,
+  ItemIndex,
 } from "./NavbarElements";
 
 import Hamburger from "../../assets/icon-hamburger.svg";
@@ -26,14 +27,7 @@ const MobileNavItems = (props) => {
       <MobileList className={isOpen && "active"}>
         {data?.map((item, index) => (
           <li key={index}>
-            <span
-              style={{
-                marginRight: "0.5rem",
-                fontWeight: "bold",
-              }}
-            >
-              0{index}
-            </span>
+            <ItemIndex>0{index}</ItemIndex>
             {item}
           </li>
         ))}
