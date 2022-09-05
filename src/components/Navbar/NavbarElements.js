@@ -4,12 +4,10 @@ const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 0 2rem 2rem;
+  padding: 0;
+  margin-top: 2rem;
+  padding-left: 2rem;
   overflow: hidden;
-
-  @media (max-width: 768px) {
-    padding: 0 0 0 2rem;
-  }
 
   @media (max-width: 640px) {
     padding: 1.5rem;

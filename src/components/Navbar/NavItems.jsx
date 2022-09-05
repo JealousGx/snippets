@@ -3,7 +3,7 @@ import { NavList, ItemIndex } from "./NavbarElements";
 
 const NavItems = (props) => {
   const { data } = props;
-  const [active, setActive] = useState(null);
+  const [active, setActive] = useState(0);
 
   return (
     <NavList>
