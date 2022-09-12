@@ -5,12 +5,12 @@ const NavContainer = styled.nav`
   align-items: center;
   justify-content: space-between;
   padding: 0;
-  margin-top: 2rem;
+  margin: 2rem 0;
   padding-left: 2rem;
   overflow: hidden;
 
   @media (max-width: 640px) {
-    padding: 1.5rem;
+    padding: 0 1.5rem;
   }
 `;
 

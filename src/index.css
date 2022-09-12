@@ -53,7 +53,7 @@ body {
   z-index: 99;
 }
 
-/* Remove the line for tablet view */
+/* Remove the line for small view points */
 @media screen and (max-width: 1024px) {
   .line {
     display: none;

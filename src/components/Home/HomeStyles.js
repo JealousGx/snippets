@@ -12,12 +12,13 @@ const HomeContainer = styled.div`
   justify-content: space-between;
 
   @media (max-width: 640px) {
+    justify-content: flex-start;
     flex-direction: column;
   }
 `;
 
 const HomeWrapper = styled.div`
-  max-width: 460px;
+  max-width: 380px;
 
   h5,
   h1 {
@@ -35,6 +36,7 @@ const HomeWrapper = styled.div`
     letter-spacing: 4.75px;
     color: #d0d6f9;
     font-family: "Barlow Condensed";
+    white-space: nowrap;
   }
 
   p {
@@ -43,6 +45,12 @@ const HomeWrapper = styled.div`
     font-family: "Barlow Condensed";
     line-height: 30px;
     letter-spacing: 1px;
+  }
+
+  @media (max-width: 640px) {
+    h1 {
+      font-size: 126px;
+    }
   }
 `;
 
@@ -69,8 +77,9 @@ const ExploreButton = styled.button`
     height: 0;
     background-color: rgba(151, 151, 151, 0.35);
     border-radius: 50%;
+    z-index: -1;
+    aspect-ratio: 1;
     transform: translate(-50%, -50%);
-    z-index: -10;
     transition: all 350ms linear;
   }
 
