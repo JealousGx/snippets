@@ -17,18 +17,16 @@
 
 body {
   font-family: "Bellefair", sans-serif;
-  height: 100vh;
   background: url("./assets/backgrounds/background-home-desktop.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #fff;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: 640px) {
   body {
-    height: 100vh;
     background: url("./assets/backgrounds/background-home-mobile.jpg");
     background-size: cover;
     background-position: center;
@@ -38,7 +36,6 @@ body {
 
 @media screen and (max-width: 1024px) {
   body {
-    height: 100vh;
     background: url("./assets/backgrounds/background-home-tablet.jpg");
     background-size: cover;
     background-position: center;
