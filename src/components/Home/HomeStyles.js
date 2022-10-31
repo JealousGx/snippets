@@ -48,8 +48,14 @@ const HomeWrapper = styled.div`
   }
 
   @media (max-width: 640px) {
+    max-width: 320px;
+
     h1 {
-      font-size: 126px;
+      font-size: 102px;
+    }
+
+    h5 {
+      font-size: 20px;
     }
   }
 `;

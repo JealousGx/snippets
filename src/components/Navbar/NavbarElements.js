@@ -6,10 +6,12 @@ const NavContainer = styled.nav`
   justify-content: space-between;
   padding: 0;
   margin: 2rem 0;
+  margin-bottom: 0;
   padding-left: 2rem;
   overflow: hidden;
 
   @media (max-width: 640px) {
+    margin-bottom: 2rem;
     padding: 0 1.5rem;
   }
 `;
@@ -36,7 +38,6 @@ const NavLogoWrapper = styled.div`
 
 // Desktop List Items
 const NavList = styled.ol`
-  font-family: "Barlow Condensed", sans-serif;
   font-size: 16px;
   letter-spacing: 1.7px;
   padding: 0 8rem 0 6rem;
@@ -49,6 +50,8 @@ const NavList = styled.ol`
   text-transform: uppercase;
 
   li {
+    font-family: "Barlow Condensed", sans-serif;
+    letter-spacing: 3px;
     width: 100%;
     height: 100%;
     padding: 2rem 0;
