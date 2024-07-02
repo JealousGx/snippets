@@ -17,6 +17,7 @@ Code Snippets can be in any language. You can share code snippets in Python, Jav
 
 - React Sidebar (with React Router): [Code](https://github.com/JealousGx/snippets/tree/sidebar), [Demo](https://jealousgx-sidebar.vercel.app/)
 - React Navbar: [Code](https://github.com/JealousGx/snippets/tree/vite-navbar-backtotop-btn)
+- React Pagination (with NextJS App Router): [Code](https://github.com/JealousGx/snippets/tree/pagination), [Demo](https://react-pagination-zeta.vercel.app/)
 
 ### Contributing to this repository:
 
