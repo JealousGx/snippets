@@ -2,13 +2,13 @@
 
 <div align="center">
   <h3>
-    <a href="https://react-navbar-zeta.vercel.app">
+    <a href="https://react-pagination-zeta.vercel.app/">
       Demo
     </a>
   </h3>
 </div>
 
-![React Navbar](https://res.cloudinary.com/jealousgx/image/upload/v1661260257/snippets-cover_vui9x0.png)
+![React Pagination](https://raw.githubusercontent.com/JealousGx/snippets/pagination/demo.jpeg)
 
 ## Features
 
